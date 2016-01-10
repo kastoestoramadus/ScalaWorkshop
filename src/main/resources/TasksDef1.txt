@@ -1,0 +1,1 @@
+how many x*x are in given range
