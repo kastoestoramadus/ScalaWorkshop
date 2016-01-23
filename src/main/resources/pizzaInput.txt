@@ -1,3 +1,8 @@
+We have Pizza restaurant. Clients come on positive int time. The make orders with different time to fulfill.
+Write an optimizer for cook chief that will check the most optimal order of serving the clients.
+Most optimal is that people waits the shortest time for their pizzas.
+
+From next line begin input example
 3
 0 3
 1 9
