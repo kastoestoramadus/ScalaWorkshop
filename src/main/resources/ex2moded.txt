@@ -20,3 +20,5 @@ chars.tail: List[Char] returns the list without the first element
 Hint: you can define an inner function if you need to pass extra parameters to your function.
 
 Testing: You can use the toList method to convert from a String to a List[Char]: e.g. "(just an) example".toList.
+
+As next step create similar program that works for all kind of parentheses {[(< >)]}

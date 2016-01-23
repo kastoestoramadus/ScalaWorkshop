@@ -20,4 +20,8 @@ class DemoTest extends FlatSpec with Matchers {
     val r3 = solution(Array(0,-2147483648,-2147483648))
     r3 should equal( -1)
   }
+  "on one element solution" should "give solution" in {
+    val r4 = solution(Array(1))
+    r4 should equal( 0)
+  }
 }
