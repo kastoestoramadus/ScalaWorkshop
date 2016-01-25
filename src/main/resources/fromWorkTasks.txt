@@ -1,0 +1,12 @@
+// 1.
+Given two Seq[DateTime, Seq[Int]]
+Assumption DateTime from both is from same week
+Merge those two Collections by merging Seq[Int] by sum first with first, second with second etc.
+
+// 2.
+https://codility.com/demo/take-sample-test/missing_integer/
+
+// 3.
+given few csv files, format of row: date, Int
+Files are from many nodes and has some data with common date.
+Sum corresponding data. Files may be big.
