@@ -10,3 +10,23 @@ Implementation.sayMyName
 
 //
 
+val ints = Map(1 -> List(1,2,3,4,5))
+cal bits = ints map { case (k, v) => (k, v.toIterator) }
+val nits = ints mapValues (_.toIterator)
+
+print(bits(1).next, bits(1).next)
+print(nits(1).next, nits(1).next)
+
+//
+
+Map().withDefault
+Map().withDefaultValue
+
+//
+
+List(1, 2).map { i => println("Hi"); i + 1 }
+List(1, 2).map { println("Hi"); _ + 1 }
+
+//
+
+http://scalapuzzlers.com/#pzzlr-001

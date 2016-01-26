@@ -8,5 +8,11 @@ https://codility.com/demo/take-sample-test/missing_integer/
 
 // 3.
 given few csv files, format of row: date, Int
-Files are from many nodes and has some data with common date.
+Files are from many nodes and has some data with common date.`
 Sum corresponding data. Files may be big.
+
+// 4.
+
+"aasdfacasdc||adsfads".split("||")
+
+// 5.
