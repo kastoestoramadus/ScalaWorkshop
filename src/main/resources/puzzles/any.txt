@@ -1,0 +1,12 @@
+trait Interface {
+  val name: String
+  val sayMyName = name+"!"
+}
+case object Implementation extends Interface {
+  override val name = "test"
+}
+Implementation.name
+Implementation.sayMyName
+
+//
+
