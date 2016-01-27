@@ -29,4 +29,35 @@ List(1, 2).map { println("Hi"); _ + 1 }
 
 //
 
+def value: Int = {
+    def one(x: Int) : Int = { return x; 1}
+    val two = (x: Int) => { return x; 2}
+    1 + one(2) + two(3)
+}
+
+//
+
+class A {
+    type X // X<: Any
+    var x: X = _
+}
+class B extends A { type X = Int }
+
+val b = new B
+println(b.x)
+val bX = b.x
+println(bX)
+
+//
+
+extends App vs Main
+
+//
+
+List: index => element
+Set: element => Boolean
+Map; key => value
+
+//
+
 http://scalapuzzlers.com/#pzzlr-001

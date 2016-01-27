@@ -1,0 +1,115 @@
+http://blog.takipi.com/5-scala-puzzlers-that-will-make-your-brain-hurt/
+
+import scala.concurrent.Future
+import scala.concurrent.ExecutionContext.Implicits.global
+import scala.util.{Failure, Success}
+
+val f = Future { throw new Error("fatal!") } recoverWith {
+    case err: Error => Future.successful("Ignoring error: " + err.getMessage)
+}
+
+f onComplete {
+    case Success(res) => println("Yay: " + res)
+    case Failure(e) => println("Oops: " + e.getMessage)
+}
+
+//
+
+val t = "this is a test"
+val rx = " ".r
+val m = rx.findAllIn(t)
+println(m)
+println(m.end)
+println(rx.findAllIn(t).end)
+
+//
+
+class C {
+    def sum(x: Int = 1, y: Int = 2): Int = x + y
+}
+class D extends C {
+    override def sum(y: Int = 3, x: Int = 4): Int = super.sum(x, y)
+}
+val d: D = new D
+val c: C = d
+c.sum(x = 0)
+d.sum(x = 0)
+
+//
+
+val nats: Stream[Int] = 1 #:: (nats map { _ + 1 })
+val odds: Stream[Int] = 1 #:: (odds map { _ + 1 } filter { _ % 2 != 0 })
+
+nats filter { _ % 2 != 0 } take 2 foreach println
+odds take 2 foreach println
+
+//
+
+def objFromJava: Object = "string"
+def stringFromJava: String = null
+
+def printLengthIfString(a: AnyRef) {
+    a match {
+        case s: String => println("String of length " + s.length)
+        case _ => println("Not a string")
+    }
+}
+
+printLengthIfString(objFromJava)
+printLengthIfString(stringFromJava)
+
+//
+
+val f = Future { throw new Error("fatal!") } recoverWith {
+    case err: Error => Future.successful("Ignoring error: " + err.getMessage)
+}
+
+f onComplete {
+    case Success(res) => println("Yay: " + res)
+    case Failure(e) => println("Oops: " + e.getMessage)
+}
+
+//
+
+val t = "this is a test"
+val rx = " ".r
+val m = rx.findAllIn(t)
+println(m)
+println(m.end)
+println(rx.findAllIn(t).end)
+
+//
+
+class C {
+    def sum(x: Int = 1, y: Int = 2): Int = x + y
+}
+class D extends C {
+    override def sum(y: Int = 3, x: Int = 4): Int = super.sum(x, y)
+}
+val d: D = new D
+val c: C = d
+c.sum(x = 0)
+d.sum(x = 0)
+
+//
+
+val nats: Stream[Int] = 1 #:: (nats map { _ + 1 })
+val odds: Stream[Int] = 1 #:: (odds map { _ + 1 } filter { _ % 2 != 0 })
+
+nats filter { _ % 2 != 0 } take 2 foreach println
+odds take 2 foreach println
+
+//
+
+def objFromJava: Object = "string"
+def stringFromJava: String = null
+
+def printLengthIfString(a: AnyRef) {
+    a match {
+        case s: String => println("String of length " + s.length)
+        case _ => println("Not a string")
+    }
+}
+
+printLengthIfString(objFromJava)
+printLengthIfString(stringFromJava)
