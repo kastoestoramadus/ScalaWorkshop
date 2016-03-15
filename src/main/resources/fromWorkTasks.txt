@@ -16,3 +16,16 @@ Sum corresponding data. Files may be big.
 "aasdfacasdc||adsfads".split("||")
 
 // 5.
+
+scala.collection.mutable.Queue a dropWhile what returns and how is related to base reference
+
+// 6.
+
+val aa = 4
+
+  5 match {
+    case aa =>
+      println(s"received $aa")
+    case _ =>
+      println("default")
+  }
