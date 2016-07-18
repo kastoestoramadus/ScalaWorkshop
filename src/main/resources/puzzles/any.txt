@@ -11,7 +11,7 @@ Implementation.sayMyName
 //
 
 val ints = Map(1 -> List(1,2,3,4,5))
-cal bits = ints map { case (k, v) => (k, v.toIterator) }
+val bits = ints map { case (k, v) => (k, v.toIterator) }
 val nits = ints mapValues (_.toIterator)
 
 print(bits(1).next, bits(1).next)
@@ -56,7 +56,7 @@ extends App vs Main
 
 List: index => element
 Set: element => Boolean
-Map; key => value
+Map: key => value
 
 //
 
